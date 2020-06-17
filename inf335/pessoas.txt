@@ -1,2 +1,6 @@
 INTEGRANTES
+<<<<<<< HEAD
 Andrew Guedes Siqueira
+=======
+Rafael Mardegan Marquini
+>>>>>>> 3b45acb... Rafael arquivo pessoas.txt

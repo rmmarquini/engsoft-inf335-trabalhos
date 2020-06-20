@@ -1,10 +1,11 @@
 package br.unicamp.ic.inf300.sort;
 
 
-public class QuickSort  {
+public class QuickSort extends Sorter  {
     private int[] numbers;
     private int number;
 
+    @Override
     public void sort(int[] values) {
         // check for empty or null array
         if (values ==null || values.length==0){

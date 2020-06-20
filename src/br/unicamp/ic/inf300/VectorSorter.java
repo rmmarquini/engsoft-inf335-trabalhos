@@ -1,6 +1,7 @@
 package br.unicamp.ic.inf300;
 
 import br.unicamp.ic.inf300.sort.BubbleSort;
+import br.unicamp.ic.inf300.sort.Sorter;
 
 public class VectorSorter {
 	
@@ -29,7 +30,7 @@ public class VectorSorter {
 	}
 	
 	public void sort() {
-		BubbleSort s = new BubbleSort();
+		Sorter s = new BubbleSort();
 		s.sort(vector);
 	}
 	
@@ -50,7 +51,7 @@ public class VectorSorter {
 
 		int[] vector = new int[size];
 
-		for (int i = 1; i < vector.length ; i++) {
+		for (int i = 0; i < vector.length ; i++) {
 			vector[i] = (int) (Math.random()*100 + 1);
 		}
 		
@@ -61,7 +62,7 @@ public class VectorSorter {
 		System.out.print("[ ");
 		System.out.print(vector[0]);
 		
-		int i = 1;
+		int i = 0;
 		do {
 			i++;
 			System.out.print(", ");

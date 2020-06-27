@@ -17,10 +17,10 @@ public class VectorSorter {
 		int[] numbers = parseParameters();
 	
 		VectorSorter sorter = new VectorSorter(numbers);
-		logger.trace("Input: ");
+		logger.info("Input: ");
 		sorter.print();
 		sorter.sort();
-		logger.trace("Sorted: ");
+		logger.info("Sorted: ");
 		sorter.print();
 	}
 	
@@ -62,16 +62,16 @@ public class VectorSorter {
 	}
 	
 	public void print() {
-		logger.trace("[");
-		logger.trace(vector[0]);
+		logger.info("[");
+		logger.info(vector[0]);
 		
 		int i = 0;
 		do {
 			i++;
-			logger.trace(", ");
-			logger.trace(vector[i]);
+			logger.info(", ");
+			logger.info(vector[i]);
 		} while (i < vector.length - 1);
 
-		logger.trace("]");
+		logger.info("]");
 	}
 }

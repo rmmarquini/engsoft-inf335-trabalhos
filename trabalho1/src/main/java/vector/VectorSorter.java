@@ -1,12 +1,15 @@
-package br.unicamp.ic.inf300;
+package vector;
 
-import br.unicamp.ic.inf300.sort.BubbleSort;
-import br.unicamp.ic.inf300.sort.Sorter;
+import org.apache.log4j.Logger;
+
+import sort.BubbleSort;
+import sort.Sorter;
 
 public class VectorSorter {
 	
 	private int[] vector;
 	private static String[] parameters;
+	private static Logger log = Logger.getLogger(VectorSorter.class);
 
 	public static void main(String[] args) {
 	

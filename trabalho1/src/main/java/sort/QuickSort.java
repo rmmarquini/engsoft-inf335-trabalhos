@@ -1,4 +1,4 @@
-package br.unicamp.ic.inf300.sort;
+package sort;
 
 
 public class QuickSort extends Sorter  {

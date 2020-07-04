@@ -1,17 +1,21 @@
 package br.unicamp.ic.extensao.inf335;
 
 import org.apache.log4j.Logger;
+import org.apache.log4j.PropertyConfigurator;
 
 import br.unicamp.ic.extensao.inf335.sort.*;
 
 public class VectorSorter {
 	
-	static Logger logger = Logger.getLogger(VectorSorter.class.getName());
+	static Logger logger = Logger.getLogger(VectorSorter.class);
 
 	private int[] vector;
 	private static String[] parameters;
 
 	public static void main(String[] args) {
+
+		//PropertiesConfigurator is used to configure logger from properties file
+        PropertyConfigurator.configure("../../../../../../resources/log4j.properties");
 
 		parameters = args;
 		int[] numbers = parseParameters();

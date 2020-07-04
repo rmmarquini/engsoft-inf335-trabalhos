@@ -1,19 +1,24 @@
-image: java:8
+image: maven:latest
 
 stages:
-  - test
   - build
-
-before_script:
-  - chmod +x mvn
-
-test:
-  stage: test
-  script: ./mvn test
+  - test
+  - package
 
 build:
   stage: build
-  script: ./mvn package
+  script:
+    - mvn compile
+
+test:
+  stage: test
+  script:
+    - mvn test
+
+package:
+  stage: package
+  script:
+    - mvn -DskipTests=true package
   artifacts:
     paths:
       - target/trabalho5-1.0-SNAPSHOT.jar

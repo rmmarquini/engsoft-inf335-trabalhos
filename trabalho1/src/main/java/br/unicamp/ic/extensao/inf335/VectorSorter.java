@@ -33,7 +33,7 @@ public class VectorSorter {
 	}
 	
 	public void sort() {
-		Sorter s = new BubbleSort();
+		Sorter s = new QuickSort();
 		s.sort(vector);
 	}
 	

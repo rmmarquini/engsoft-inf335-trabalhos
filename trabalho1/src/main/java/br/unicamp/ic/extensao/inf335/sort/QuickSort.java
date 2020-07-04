@@ -54,7 +54,7 @@ public class QuickSort extends Sorter {
 
     private void exchange(int i, int j) {
         int temp = numbers[i];
-        numbers[j] = numbers[i];
+        numbers[i] = numbers[j];
         numbers[j] = temp;
     }
 }

@@ -5,15 +5,15 @@ stages:
   - build
 
 before_script:
-  - chmod +x mvnw
+  - chmod +x mvn
 
 test:
   stage: test
-  script: ./mvnw test
+  script: ./mvn test
 
 build:
   stage: build
-  script: ./mvnw package
+  script: ./mvn package
   artifacts:
     paths:
       - target/trabalho5-1.0-SNAPSHOT.jar

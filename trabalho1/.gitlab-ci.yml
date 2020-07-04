@@ -22,7 +22,7 @@ package:
   stage: package
   script:
     - mvn -DskipTests=true package
-    - java -jar trabalho5-1.0-SNAPSHOT.jar
+    - java -jar target/trabalho5-1.0-SNAPSHOT.jar
   artifacts:
     paths:
       - target/trabalho5-1.0-SNAPSHOT.jar

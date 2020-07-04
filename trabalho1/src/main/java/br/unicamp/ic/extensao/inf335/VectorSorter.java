@@ -1,5 +1,6 @@
 package br.unicamp.ic.extensao.inf335;
 
+import org.apache.log4j.BasicConfigurator;
 import org.apache.log4j.Logger;
 
 import br.unicamp.ic.extensao.inf335.sort.*;
@@ -12,6 +13,8 @@ public class VectorSorter {
 	private static String[] parameters;
 
 	public static void main(String[] args) {
+		
+		BasicConfigurator.configure();
 
 		parameters = args;
 		int[] numbers = parseParameters();

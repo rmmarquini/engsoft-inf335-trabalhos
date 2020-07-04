@@ -1,19 +1,28 @@
-image: java:8
+image: maven:latest
 
 stages:
-  - test
   - build
+  - test
+  - package
 
 before_script:
-  - chmod +x mvnw
-
-test:
-  stage: test
-  script: ./mvnw test
+  - cd trabalho1/
 
 build:
   stage: build
-  script: ./mvnw package
+  script:
+    - mvn compile
+
+test:
+  stage: test
+  script:
+    - mvn test
+
+package:
+  stage: package
+  script:
+    - mvn -DskipTests=true package
+    - java -jar trabalho5-1.0-SNAPSHOT.jar
   artifacts:
     paths:
       - target/trabalho5-1.0-SNAPSHOT.jar
